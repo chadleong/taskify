@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { Todo } from "../model"
 import { AiFillEdit, AiFillDelete } from "react-icons/ai"
 import { MdDone } from "react-icons/md"
-import TodoList from "./TodoList"
-import { Droppable, Draggable } from "react-beautiful-dnd"
+import { Draggable } from "react-beautiful-dnd"
 
 type Props = {
     index: number
