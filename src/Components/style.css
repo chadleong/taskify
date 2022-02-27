@@ -43,20 +43,41 @@
     box-shadow: 0 0 5px black;
 }
 
+.container {
+    display: flex;
+    margin-top: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.todos_heading {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1d1c1cf3;
+}
+
 .todos {
     display: flex;
-    justify-content: space-evenly;
-    width: 90%;
-    flex-wrap: wrap;
+    width: 47.5%;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(50, 195, 205);
 }
 
 .todos_single {
     display: flex;
-    width: 29.5%;
     border-radius: 5px;
     padding: 20px;
     margin-top: 15px;
     background-color: yellow;
+    transition: 0.2s;
+}
+
+.todos_single:hover {
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
 }
 
 .todos_single_text:focus {
@@ -82,14 +103,33 @@
 
     .todos {
         width: 95%;
+        margin-bottom: 10px;
     }
-    .todos_single {
-        width: 100%;
+
+    .container {
+        width: 95%;
+        flex-direction: column;
     }
 }
 
+.completed {
+    background-color: rgb(235, 103, 80);
+}
+
 @media (max-width: 1200px) {
-    .todos_single {
+    .todos {
         width: 45%;
     }
+}
+
+.dragactive {
+    background-color: rgb(0, 221, 236);
+}
+
+.dragcomplete {
+    background-color: rgb(255, 38, 0);
+}
+
+.drag {
+    box-shadow: 0 0 20px black;
 }
